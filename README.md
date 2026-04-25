@@ -89,36 +89,6 @@ Add screenshots here to make the README stronger:
 
 ---
 
-## Customization
-
-- Add/replace songs in the `assets/audio/` folder (if used)
-- Update playlist data inside your JavaScript file (if hardcoded)
-- Modify theme colors and layout in your CSS
-
----
-
-## Roadmap (Ideas)
-
-- Search functionality
-- Create playlists
-- Queue system
-- Lyrics view
-- Backend integration (auth + real music catalog)
-
----
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repo  
-2. Create a new branch: `git checkout -b feature-name`  
-3. Commit changes: `git commit -m "Add feature"`  
-4. Push to branch: `git push origin feature-name`  
-5. Open a Pull Request
-
----
-
 ## License
 
 Add a license if you want open-source reuse (MIT is common). Example:
