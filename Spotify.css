@@ -1,0 +1,662 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    padding-top: 48px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.navbar {
+    background: #000000;
+    padding: 0 16px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+.logo img {
+    width: 32px;
+    height: 35px;
+    padding-right: 20px;
+    filter: invert(1);
+}
+
+.home img {
+    width: 25px;
+    height: 25px;
+    padding: 9px 8px;
+    filter: invert(0.9);
+}
+
+.home button {
+    background: #1a1a1a;
+    border: none;
+    border-radius: 50%;
+}
+
+.search img {
+    width: 23px;
+    height: 23px;
+    filter: invert(0.7);
+}
+
+.search {
+    background-color: #242424de;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 10px;
+    gap: 7px;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+
+.search input {
+    cursor: text;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 360px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.search input::placeholder {
+    color: #ffffffbb;
+}
+
+.search:hover {
+    border: 1px solid #595656e8;
+    background-color: #353333e8;
+}
+
+.browse img {
+    border-inline-start: 1px solid #555;
+    padding-inline: 12px 8px;
+    filter: invert(0.7);
+    width: 23px;
+    height: 23px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-left: 255px;
+}
+
+.content ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    border-inline-end: 2px solid #555;
+    color: #ffffffbb;
+    padding-inline: 0px 18px;
+    font-size: var(--encore-text-size-base);
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.content ul li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.content ul li:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.content2 img {
+    width: 17px;
+    height: 17px;
+    padding: 0px 3px;
+    filter: invert(0.7);
+}
+
+.content2 ul {
+    align-items: center;
+    color: #ffffffbb;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.content2 ul li:first-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content2 ul li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.content2 ul li:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.content2 button {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.left {
+    box-sizing: border-box;
+    width: 30vw;
+    background: linear-gradient(to right, #121212, #302f2f50);
+    height: calc(100vh - 128px);
+    margin-top: 0;
+    margin-left: 10px;
+    border-radius: 9px;
+    display: block;
+    /* ← change from flex to block */
+    padding: 5px 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 48px;
+}
+
+.left * {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.library {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 8px;
+    padding-top: 30px;
+}
+
+.library h3 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+
+.songsList {
+    display: block;
+    width: 100%;
+}
+
+.songsList ul {
+    display: block;
+    padding-left: 0;
+    margin: 0;
+}
+
+.songsList ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid #2a2a2a;
+    margin: 8px 12px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    color: #ffffffbb;
+    transition: 0.2s;
+}
+
+.songsList ul li:hover {
+    background-color: #1f1f1f;
+}
+
+.songsList ul li img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.7);
+}
+
+.songsList .info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.active-song {
+    border: 2px solid #1db954;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 10px #1db954;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px #1db954;
+    }
+
+    50% {
+        box-shadow: 0 0 15px #1db954;
+    }
+
+    100% {
+        box-shadow: 0 0 0px #1db954;
+    }
+}
+
+.playnow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    color: #ffffffbb;
+}
+
+.playnow img {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.songsList ul li:hover .playnow img {
+    opacity: 1;
+}
+
+.playnow img:hover {
+    filter: invert(1);
+
+}
+
+.play-text {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.active-song .play-text {
+    color: #1db954;
+    font-weight: 500;
+}
+
+.create {
+    padding: 0;
+    margin: 8px 15px;
+}
+
+
+.create img {
+    width: 15px;
+    height: 15px;
+    filter: invert(0.7);
+    padding: 0;
+}
+
+
+.create button {
+    background-color: rgba(128, 128, 128, 0.142);
+    border: none;
+    border-radius: 70px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    padding: 8px 17px;
+    cursor: pointer;
+}
+
+.create button:hover {
+    border: 1px solid #595656e8;
+    background-color: #353333e8;
+}
+
+.legal {
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.group1 ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 15px;
+    font-size: 11px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    color: #ffffffbb;
+    padding-left: 15px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.group2 ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 11px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    color: #ffffffbb;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.group3 ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    list-style: none;
+    font-size: 11px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    color: #ffffffdd;
+    cursor: pointer;
+}
+
+.language-btn img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+}
+
+.language-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #727272;
+    border-radius: 100px;
+    padding: 5px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 15px 20px;
+}
+
+.language-btn:hover {
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+.right {
+    box-sizing: border-box;
+    width: calc(100vw - 30vw);
+    height: calc(100vh - 80px);
+    background: linear-gradient(to bottom, #363434ba, #030303);
+    margin-left: 31.5vw;
+    border: none;
+    border-radius: 9px;
+    overflow-y: scroll;
+}
+
+.right * {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 0;
+}
+
+.SpotifyPlaylists h2 {
+    padding: 30px 35px;
+
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 65px;
+}
+
+.active-card {
+    outline: 2px solid #1db954;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #1db95460;
+}
+
+/* Make library heading clickable to reset */
+.library h3 {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.library h3:hover {
+    color: #1db954;
+}
+
+.card {
+    width: 200px;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.1);
+    padding-top: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: 0;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(0px);
+    border-radius: 8px;
+}
+
+.card img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+}
+
+
+.card:hover::before {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card h3,
+.card p {
+    position: relative;
+    z-index: 1;
+}
+
+.play img {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(79, 199, 79);
+    border-radius: 50%;
+    padding: 8px 8px;
+    right: 0;
+}
+
+.card .play {
+    position: absolute;
+    bottom: 0px;
+    left: 135px;
+    transform: translateY(-180%);
+    z-index: 2;
+    transition: all 0.1s ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.card:hover .play {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.play img:hover {
+    background-color: rgb(108, 193, 108);
+}
+
+.play:hover {
+    transform: translateY(-180%) scale(1.1);
+}
+
+.footer {
+    background: #1b1a1a;
+    color: #ffffff;
+    padding: 0px 24px;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    border-top: 1px solid #2a2a2a;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 8px 8px;
+    right: 0;
+}
+
+
+.buttons .play-btn {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.buttons .play-btn:hover {
+    background-color: #ffffffdd;
+    transform: scale(1.05);
+}
+
+.buttons .btn {
+    filter: invert(0.7);
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    transform: scale(1.05);
+    filter: invert(1);
+
+}
+
+.songinfo {
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 220px;
+    overflow: hidden;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slideUpFade 0.4s ease forwards;
+    opacity: 0;
+}
+
+.song-artist {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slideUpFade 0.4s ease 0.12s forwards;
+    opacity: 0;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.seekbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.seek-slider {
+    flex: 1;
+    cursor: pointer;
+    accent-color: #1db954;
+    height: 4px;
+}
+
+
+.volume-slider {
+    width: 90px;
+    cursor: pointer;
+    accent-color: #1db954;
+    height: 4px;
+}
+
+.volume {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

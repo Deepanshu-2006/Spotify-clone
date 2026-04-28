@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Spotify.css">
+    <link rel="stylesheet" href="Utility.css">
+    <title>Spotify - Web Player: Music For Everyone</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="svg/logo.svg" alt="logo">
+        </div>
+        <div class="home">
+            <button><img src="svg/home.svg" alt="home"></button>
+        </div>
+        <div class="search flex items-center">
+            <img src="svg/search.svg" alt="search">
+            <input type="text" placeholder="What do you want to play?">
+            <div class="browse">
+                <img src="svg/browse.svg" alt="browse">
+            </div>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Premium</li>
+                <li>Support</li>
+                <li>Download</li>
+            </ul>
+        </div>
+        <div class="content2">
+            <ul>
+                <li><img src="svg/install.svg" alt="install">Install App</li>
+                <li>Sign up</li>
+                <li><button>Log in</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="homepage flex">
+        <div class="left">
+            <div class="library">
+                <h3>Your Library</h3>
+                <div class="create">
+                    <button><img src="svg/create.svg" alt="create">Create</button>
+                </div>
+            </div>
+            <div class="songsList">
+                <ul></ul>
+            </div>
+            <div class="legal">
+                <div class="group1">
+                    <ul>
+                        <li>Legal</li>
+                        <li>Safety & Privacy Center</li>
+                        <li>Privacy Policy</li>
+                        <li>Cookies</li>
+                    </ul>
+                </div>
+                <div class="group2">
+                    <ul>
+                        <li>About Ads</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+                <div class="group3">
+                    <ul>
+                        <li>Cookies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="language-btn">
+                <img src="svg/globe.svg" alt="globe">English
+            </div>
+        </div>
+        <div class="right">
+            <div class="SpotifyPlaylists">
+                <h2>Artists</h2>
+                <div class="cardcontainer">
+                    <div class="card" data-artist="Masoom Sharma">
+                        <div class="play">
+                            <img src="svg/play.svg" alt="play">
+                        </div>
+                        <img src="images/Masoom Sharma.jpeg" alt="">
+                        <h3>Masoom Sharma</h3>
+                        <p>Hits to boost your mood and fill you with energy</p>
+                    </div>
+                    <div class="card" data-artist="Diljit Dosanjh">
+                        <div class="play">
+                            <img src="svg/play.svg" alt="play">
+                        </div>
+                        <img src="images/Diljit .jpg" alt="">
+                        <h3>Diljit Dosanjh</h3>
+                        <p>Hit Punjabi Bangers</p>
+                    </div>
+                    <div class="card" data-artist="Karan Aujla">
+                        <div class="play">
+                            <img src="svg/play.svg" alt="play">
+                        </div>
+                        <img src="images/karan-aujla.jpg" alt="">
+                        <h3>Karan Aujla</h3>
+                        <p>Chill Songs to lift up your mood</p>
+                    </div>
+                    <div class="card" data-artist="Yo Yo Honey Singh">
+                        <div class="play">
+                            <img src="svg/play.svg" alt="play">
+                        </div>
+                        <img src="images/Yo-Yo-Honey-Singh.jpg" alt="">
+                        <h3>Yo Yo Honey Singh</h3>
+                        <p>Bluetooth Era Legendary Songs</p>
+                    </div>
+                    <div class="card" data-artist="Babbu Maan">
+                        <div class="play">
+                            <img src="svg/play.svg" alt="play">
+                        </div>
+                        <img src="images/Babbu Maan.jpg" alt="">
+                        <h3>Babbu Maan</h3>
+                        <p>Best Songs to charge you up</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="songinfo"></div>
+            <div class="controls">
+                <div class="buttons">
+                    <img class="btn previous" src="svg/previous.svg" alt="previous">
+                    <img class="play-btn" src="svg/play.svg" alt="play">
+                    <img class="btn forward" src="svg/forward.svg" alt="forward">
+                </div>
+                <div class="seekbar">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="seek-slider" value="0" min="0" max="100">
+                    <span class="total-time">0:00</span>
+                </div>
+            </div>
+            <div class="volume">
+                <span>🔊</span>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div class="songtime"></div>
+        </div>
+    </div>
+    <script src="Spotify.js"></script>
+</body>
+
+</html>
