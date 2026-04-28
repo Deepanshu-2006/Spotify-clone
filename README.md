@@ -79,7 +79,8 @@ Spotify-clone/
 ---
 
 ## Screenshots
-<img width="1470" height="809" alt="Screenshot 2026-04-25 at 11 31 03" src="https://github.com/user-attachments/assets/a97e05aa-e353-4937-b4ba-512f0079b243" />
+<img width="1470" height="808" alt="Screenshot 2026-04-28 at 08 45 10" src="https://github.com/user-attachments/assets/dfc26a3b-b1d0-44f4-a646-67e0988fb0f8" />
+
 
 ---
 
